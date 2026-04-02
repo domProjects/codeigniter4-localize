@@ -1,0 +1,40 @@
+{
+    "name": "domprojects/codeigniter4-localize",
+    "description": "Locale management and URL localization filter for CodeIgniter 4 projects.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "codeigniter4",
+        "codeigniter",
+        "localization",
+        "locale",
+        "language",
+        "filter"
+    ],
+    "homepage": "https://github.com/domProjects/codeigniter4-localize",
+    "support": {
+        "issues": "https://github.com/domProjects/codeigniter4-localize/issues",
+        "source": "https://github.com/domProjects/codeigniter4-localize"
+    },
+    "authors": [
+        {
+            "name": "domProjects",
+            "homepage": "https://github.com/domProjects",
+            "role": "Maintainer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "codeigniter4/framework": "^4.7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "domProjects\\CodeIgniterLocalize\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.x-dev"
+        }
+    }
+}
