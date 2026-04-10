@@ -1,0 +1,20 @@
+<?php
+
+declare(strict_types=1);
+
+spl_autoload_register(static function (string $class): void {
+    $prefix = 'domProjects\\CodeIgniterLocalize\\';
+
+    if (! str_starts_with($class, $prefix)) {
+        return;
+    }
+
+    $relativePath = str_replace('\\', '/', substr($class, strlen($prefix)));
+    $file         = __DIR__ . '/src/' . $relativePath . '.php';
+
+    if (is_file($file)) {
+        require_once $file;
+    }
+}, true, true);
+
+require __DIR__ . '/tests/bootstrap.php';

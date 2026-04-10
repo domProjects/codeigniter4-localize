@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * This file is part of domprojects/codeigniter4-localize.
+ *
+ * (c) domProjects
+ *
+ * For the full copyright and license information, please view
+ * the LICENSE file that was distributed with this source code.
+ */
+
 namespace domProjects\CodeIgniterLocalize\Filters;
 
 use CodeIgniter\Exceptions\PageNotFoundException;
@@ -81,6 +90,7 @@ class Localize implements FilterInterface
 
     public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)
     {
+        return null;
     }
 
     private function applyLocale(IncomingRequest $request, string $locale): void
@@ -99,7 +109,7 @@ class Localize implements FilterInterface
             ($response ?? Services::response())->setCookie(
                 $config->cookieName,
                 $locale,
-                $config->cookieExpire
+                $config->cookieExpire,
             );
         }
     }
@@ -108,7 +118,7 @@ class Localize implements FilterInterface
         string $locale,
         string $path,
         IncomingRequest $request,
-        LocalizeConfig $config
+        LocalizeConfig $config,
     ): ResponseInterface {
         $target = '/' . trim($locale . '/' . trim($path, '/'), '/');
         $query  = $request->getUri()->getQuery();
@@ -144,7 +154,7 @@ class Localize implements FilterInterface
         IncomingRequest $request,
         App $appConfig,
         LocalizeConfig $localizeConfig,
-        array $supportedLocales
+        array $supportedLocales,
     ): string {
         if ($localizeConfig->storeInSession) {
             $sessionLocale = session()->get($localizeConfig->sessionKey);
@@ -216,7 +226,7 @@ class Localize implements FilterInterface
     private function getSupportedLocales(App $appConfig): array
     {
         if ($appConfig->supportedLocales !== []) {
-            return array_values($appConfig->supportedLocales);
+            return $appConfig->supportedLocales;
         }
 
         return [$appConfig->defaultLocale];

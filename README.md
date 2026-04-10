@@ -1,4 +1,4 @@
-# domProjects CodeIgniter 4 Localize
+# Localize for CodeIgniter 4
 
 Locale management and URL localization filter for CodeIgniter 4.
 
