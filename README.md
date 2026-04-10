@@ -1,5 +1,11 @@
 # Localize for CodeIgniter 4
 
+[![Packagist](https://img.shields.io/packagist/v/domprojects/codeigniter4-localize?label=Packagist)](https://packagist.org/packages/domprojects/codeigniter4-localize)
+[![License](https://img.shields.io/github/license/domProjects/codeigniter4-localize)](https://github.com/domProjects/codeigniter4-localize/blob/main/LICENSE)
+[![PHPUnit](https://img.shields.io/github/actions/workflow/status/domProjects/codeigniter4-localize/phpunit.yml?branch=main&label=PHPUnit)](https://github.com/domProjects/codeigniter4-localize/actions/workflows/phpunit.yml)
+[![Psalm](https://img.shields.io/github/actions/workflow/status/domProjects/codeigniter4-localize/psalm.yml?branch=main&label=Psalm)](https://github.com/domProjects/codeigniter4-localize/actions/workflows/psalm.yml)
+[![PHPStan](https://img.shields.io/github/actions/workflow/status/domProjects/codeigniter4-localize/phpstan.yml?branch=main&label=PHPStan)](https://github.com/domProjects/codeigniter4-localize/actions/workflows/phpstan.yml)
+
 Locale management and URL localization filter for CodeIgniter 4.
 
 This package adds a reusable localization filter that can:

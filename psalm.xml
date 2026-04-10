@@ -6,7 +6,7 @@
     ensureOverrideAttribute="false"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns="https://getpsalm.org/schema/config"
-    xsi:schemaLocation="https://getpsalm.org/schema/config ../../../vendor/vimeo/psalm/config.xsd"
+    xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
     autoloader="psalm_autoload.php"
     cacheDirectory="build/psalm/"
     findUnusedBaselineEntry="true"
@@ -17,7 +17,7 @@
         <directory name="tests/" />
         <ignoreFiles>
             <directory name="build" />
-            <directory name="../../../vendor" />
+            <directory name="vendor" />
             <directory name="tests/_support" />
         </ignoreFiles>
     </projectFiles>

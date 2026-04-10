@@ -40,6 +40,8 @@
             "domProjects\\CodeIgniterLocalize\\Tests\\": "tests/"
         }
     },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "config": {
         "allow-plugins": {
             "phpstan/extension-installer": true
@@ -55,7 +57,7 @@
         ],
         "cs": "php-cs-fixer fix --ansi --verbose --dry-run --diff --config=.php-cs-fixer.dist.php",
         "cs-fix": "php-cs-fixer fix --ansi --verbose --diff --config=.php-cs-fixer.dist.php",
-        "test": "phpunit -c phpunit.xml.dist"
+        "test": "@php -d xdebug.mode=coverage vendor/bin/phpunit -c phpunit.xml.dist"
     },
     "extra": {
         "branch-alias": {
