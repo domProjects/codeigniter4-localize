@@ -36,13 +36,13 @@ class Localize implements FilterInterface
         }
 
         $supportedLocales = $this->getSupportedLocales($appConfig);
-        $path             = trim($request->getUri()->getPath(), '/');
+        $path             = trim($request->getPath(), '/');
 
         if ($this->isExcluded($path, $localizeConfig->excluded)) {
             return null;
         }
 
-        $segments        = $request->getUri()->getSegments();
+        $segments        = $path === '' ? [] : explode('/', $path);
         $firstSegment    = $segments[0] ?? '';
         $requestedLocale = $this->resolveSupportedLocale($firstSegment, $supportedLocales);
 
